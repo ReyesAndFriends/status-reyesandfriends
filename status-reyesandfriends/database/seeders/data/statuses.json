@@ -11,7 +11,7 @@
     },
     {
         "name": "Interrupción parcial",
-        "description": "Una parte del servicio está caída.",
+        "description": "El servicio está experimentando interrupciones limitadas.",
         "color": "bg-orange-700"
     },
     {
