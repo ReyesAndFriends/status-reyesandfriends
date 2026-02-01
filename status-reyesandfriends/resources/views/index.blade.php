@@ -38,7 +38,7 @@
                         <td class="px-6 py-4 whitespace-nowrap font-medium">{{ $service->name }}</td>
                         <td class="px-6 py-4 whitespace-nowrap">{{ $service->type->name }}</td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            @if ($service->status)
+                            @if ($service->is_active)
                                 <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold {{ $service->status->color ?? 'bg-gray-400' }} text-white">
                                     {{ $service->status->name }}
                                 </span>
