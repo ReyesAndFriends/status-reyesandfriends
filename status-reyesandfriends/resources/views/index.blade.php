@@ -5,30 +5,15 @@
         <div class="rounded-lg px-6 py-4 text-center text-lg font-medium shadow {{ $generalStatus['color'] }}">
             <span class="inline-flex items-center">
                 @if ($generalStatus['icon'] === 'ticket')
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
+                    <i class="fas fa-check-circle w-5 h-5 mr-2"></i>
                 @elseif ($generalStatus['icon'] === 'alert-triangle')
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
-                        <line x1="12" y1="9" x2="12" y2="13" />
-                        <line x1="12" y1="17" x2="12.01" y2="17" />
-                    </svg>
+                    <i class="fas fa-exclamation-triangle w-5 h-5 mr-2"></i>
                 @elseif ($generalStatus['icon'] === 'alert-circle')
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="10" />
-                        <line x1="12" y1="8" x2="12" y2="12" />
-                        <line x1="12" y1="16" x2="12.01" y2="16" />
-                    </svg>
+                    <i class="fas fa-exclamation-circle w-5 h-5 mr-2"></i>
                 @elseif ($generalStatus['icon'] === 'activity')
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-                    </svg>
+                    <i class="fas fa-bolt w-5 h-5 mr-2"></i>
                 @elseif ($generalStatus['icon'] === 'clock')
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="10" />
-                        <polyline points="12 6 12 12 16 14" />
-                    </svg>
+                    <i class="fas fa-clock w-5 h-5 mr-2"></i>
                 @endif
                 {{ $generalStatus['text'] }}
             </span>
