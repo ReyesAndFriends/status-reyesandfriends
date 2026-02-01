@@ -35,9 +35,9 @@ class HandleServiceCheck implements ShouldQueue
     public function handle(): void
     {
         if (!$this->serviceName) {
-            // Listar todos los servicios y despachar un job por cada uno
-            foreach (Service::all() as $service) {
-                // Despacha un job para cada servicio
+            // Listar todos los servicios activos y despachar un job por cada uno
+            foreach (Service::where('is_active', 1)->get() as $service) {
+                // Despacha un job para cada servicio activo
                 dispatch(new self($service->name));
             }
             return;
