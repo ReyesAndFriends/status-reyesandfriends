@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('url')->nullable();
             $table->boolean('is_active')->default(true);
             $table->unsignedBigInteger('type_id');
-            $table->unsignedBigInteger('status_id');
+            $table->unsignedBigInteger('status_id')->nullable();
             $table->timestamps();
             $table->foreign('status_id')->references('id')->on('statuses')->onDelete('cascade');
             $table->foreign('type_id')->references('id')->on('service_types')->onDelete('cascade');

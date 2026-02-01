@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Operativo",
+        "description": "El servicio está funcionando correctamente."
+    },
+    {
+        "name": "Degradado",
+        "description": "El servicio está funcionando pero con problemas parciales."
+    },
+    {
+        "name": "Interrupción parcial",
+        "description": "Una parte del servicio está caída."
+    },
+    {
+        "name": "Interrupción mayor",
+        "description": "El servicio está completamente caído."
+    },
+    {
+        "name": "Mantenimiento programado",
+        "description": "El servicio está en mantenimiento planificado."
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "name": "reyesandfriends.cl",
+        "description": "Sitio principal",
+        "url": "https://reyesandfriends.cl",
+        "is_active": true,
+        "status": "Operativo",
+        "service": "Sitio Web"
+    },
+    {
+        "name": "api.reyesandfriends.cl",
+        "description": "API backend Sitio principal",
+        "url": "https://api.reyesandfriends.cl",
+        "is_active": true,
+        "status": "Operativo",
+        "service": "API"
+    },
+    {
+        "name": "panel.reyesandfriends.cl",
+        "description": "Panel de administración para clientes y administradores",
+        "url": "https://panel.reyesandfriends.cl",
+        "is_active": false,
+        "status": null,
+        "service": "Panel de Administración"
+    },
+    {
+        "name": "broadcast.reyeshosting.cl",
+        "description": "Servicio de notificaciones globales para Reyes&Friends y relacionados",
+        "url": "https://broadcast.reyeshosting.cl",
+        "is_active": false,
+        "status": null,
+        "service": "Servicio"
+    },
+    {
+        "name": "demo.reyesandfriends.cl",
+        "description": "Servicio Web de demostración para Reyes&Friends",
+        "url": "https://demo.reyesandfriends.cl",
+        "is_active": true,
+        "status": "Operativo",
+        "service": "Servicio"
+    },
+    {
+        "name": "ReyesHosting",
+        "description": "Sitio web de servicios de hosting Minecraft y otros juegos",
+        "url": "https://reyeshosting.cl",
+        "is_active": false,
+        "status": null,
+        "service": "Sitio Web"
+    },
+    {
+        "name": "panel.reyeshosting.cl",
+        "description": "Panel Pterodactyl para gestión de servidores en ReyesHosting",
+        "url": "https://panel.reyeshosting.cl",
+        "is_active": true,
+        "status": "Operativo",
+        "service": "Panel de Administración"
+    }
+]

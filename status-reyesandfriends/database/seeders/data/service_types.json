@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Sitio Web",
+        "description": "Sitios web de Reyes&Friends"
+    },
+    {
+        "name": "API",
+        "description": "Servicios backend de Reyes&Friends"
+    },
+    {
+        "name": "Servicio",
+        "description": "Servicios de Reyes&Friends"
+    },
+    {
+        "name": "Panel de Administración",
+        "description": "Paneles de administración de Reyes&Friends"
+    }
+]
