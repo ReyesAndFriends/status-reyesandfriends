@@ -20,6 +20,7 @@ class StatusSeeder extends Seeder
                 ['name' => $item['name']],
                 [
                     'description' => $item['description'] ?? null,
+                    'color' => $item['color'] ?? 'bg-gray-600',
                 ]
             );
         }

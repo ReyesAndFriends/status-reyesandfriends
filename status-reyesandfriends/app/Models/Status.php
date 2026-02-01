@@ -9,6 +9,7 @@ class Status extends Model
     protected $fillable = [
         'name',
         'description',
+        'color',
     ];
 
     public function services()

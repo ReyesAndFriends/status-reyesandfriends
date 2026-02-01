@@ -1,22 +1,27 @@
 [
     {
         "name": "Operativo",
-        "description": "El servicio está funcionando correctamente."
+        "description": "El servicio está funcionando correctamente.",
+        "color": "bg-green-700"
     },
     {
         "name": "Degradado",
-        "description": "El servicio está funcionando pero con problemas parciales."
+        "description": "El servicio está funcionando pero con problemas parciales.",
+        "color": "bg-yellow-700"
     },
     {
         "name": "Interrupción parcial",
-        "description": "Una parte del servicio está caída."
+        "description": "Una parte del servicio está caída.",
+        "color": "bg-orange-700"
     },
     {
         "name": "Interrupción mayor",
-        "description": "El servicio está completamente caído."
+        "description": "El servicio está completamente caído.",
+        "color": "bg-red-700"
     },
     {
         "name": "Mantenimiento programado",
-        "description": "El servicio está en mantenimiento planificado."
+        "description": "El servicio está en mantenimiento planificado.",
+        "color": "bg-blue-700"
     }
 ]

@@ -16,10 +16,10 @@
     <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] dark:text-[#FDFDFC] flex flex-col min-h-screen">
 
         <header class="flex items-center justify-between mx-auto w-full max-w-5xl py-8 px-8">
-            <div class="flex items-center">
+            <a href="{{ route('home') }}" class="flex items-center">
                 <img src="/reyesandfriends-black.svg" alt="Reyes&Friends logo" class="h-10 w-auto mr-3 block dark:hidden">
                 <img src="/reyesandfriends-white.svg" alt="Reyes&Friends logo" class="h-10 w-auto mr-3 hidden dark:block">
-            </div>
+            </a>
             @auth
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf

@@ -5,9 +5,9 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Http\Request;
 
-Route::get('/', function () {
-    return view('index');
-});
+use App\Http\Controllers\HomeController;
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);

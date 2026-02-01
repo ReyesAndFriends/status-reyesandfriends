@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->text('description')->nullable();
+            $table->string('color', 32)->default('gray-500'); // Nueva columna para el color
             $table->timestamps();
         });
     }
