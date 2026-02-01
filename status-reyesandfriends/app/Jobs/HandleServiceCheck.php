@@ -20,23 +20,29 @@ class HandleServiceCheck implements ShouldQueue
     /**
      * Create a new job instance.
      *
-     * @param string $serviceName
+     * @param string|null $serviceName
      */
-    public function __construct(string $serviceName)
+    public function __construct(string $serviceName = null)
     {
         $this->serviceName = $serviceName;
     }
 
     /**
      * Execute the job.
-     * 1. Busca el servicio por nombre.
-     * 2. Realiza un GET a la URL del servicio.
-     * 3. Mide el tiempo de respuesta.
-     * 4. Guarda el resultado en ServiceCheck.
-     * 5. Actualiza el status_id y updated_at del servicio según la respuesta.
+     * Si no hay $serviceName, despacha un job por cada servicio.
+     * Si hay $serviceName, realiza el chequeo como antes.
      */
     public function handle(): void
     {
+        if (!$this->serviceName) {
+            // Listar todos los servicios y despachar un job por cada uno
+            foreach (Service::all() as $service) {
+                // Despacha un job para cada servicio
+                dispatch(new self($service->name));
+            }
+            return;
+        }
+
         $service = Service::where('name', $this->serviceName)->first();
 
         if (!$service) {
