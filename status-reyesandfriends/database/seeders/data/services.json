@@ -43,8 +43,8 @@
         "name": "ReyesHosting",
         "description": "Sitio web de servicios de hosting Minecraft y otros juegos",
         "url": "https://reyeshosting.cl",
-        "is_active": false,
-        "status": null,
+        "is_active": true,
+        "status": "Operativo",
         "service": "Sitio Web"
     },
     {
