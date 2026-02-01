@@ -17,7 +17,6 @@ return new class extends Migration
             $table->timestamp('checked_at');
             $table->integer('response_time')->nullable();
             $table->integer('http_code');
-            $table->string('status');
             $table->text('error_message')->nullable();
             $table->timestamps();
             $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');

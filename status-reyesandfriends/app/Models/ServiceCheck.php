@@ -11,7 +11,11 @@ class ServiceCheck extends Model
         'checked_at',
         'response_time',
         'http_code',
-        'status',
         'error_message',
     ];
+
+    public function service()
+    {
+        return $this->belongsTo(Service::class, 'service_id');
+    }
 }

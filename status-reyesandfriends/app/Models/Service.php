@@ -24,4 +24,9 @@ class Service extends Model
     {
         return $this->belongsTo(ServiceType::class, 'type_id');
     }
+
+    public function checks()
+    {
+        return $this->hasMany(ServiceCheck::class, 'service_id');
+    }
 }
