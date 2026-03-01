@@ -29,6 +29,7 @@
                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Servicio</th>
                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Tipo</th>
                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Estado</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Uptime</th>
                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Última actualización</th>
                     </tr>
                 </thead>
@@ -48,11 +49,18 @@
                                 </span>
                             @endif
                         </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            @if (is_null($service->uptime_percentage))
+                                <span class="text-gray-500 dark:text-gray-300">N/A</span>
+                            @else
+                                {{ number_format($service->uptime_percentage, 2) }}%
+                            @endif
+                        </td>
                         <td class="px-6 py-4 whitespace-nowrap">{{ $service->updated_at }}</td>
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="3" class="px-6 py-4 text-center text-gray-500 dark:text-gray-300">No hay servicios disponibles.</td>
+                        <td colspan="5" class="px-6 py-4 text-center text-gray-500 dark:text-gray-300">No hay servicios disponibles.</td>
                     </tr>
                     @endforelse
                 </tbody>

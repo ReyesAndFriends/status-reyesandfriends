@@ -9,9 +9,23 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $services = Service::with('status')->get();
+        $services = Service::with(['status', 'type'])
+            ->withCount('checks')
+            ->withCount([
+                'checks as successful_checks_count' => function ($query) {
+                    $query->whereBetween('http_code', [200, 399]);
+                },
+            ])
+            ->get()
+            ->map(function ($service) {
+                $service->uptime_percentage = $service->checks_count > 0
+                    ? round(($service->successful_checks_count / $service->checks_count) * 100, 2)
+                    : null;
 
-        $activeServices = Service::with('status')->where('is_active', true)->get();
+                return $service;
+            });
+
+        $activeServices = $services->where('is_active', true);
 
         // Contar servicios por status (solo activos)
         $statusCounts = [
@@ -54,7 +68,7 @@ class HomeController extends Controller
                 'icon' => 'activity',
                 'color' => 'bg-yellow-500 text-white dark:bg-yellow-700',
             ];
-        } elseif ($statusCounts['Mantenimiento programado'] === count($activeServices) && count($activeServices) > 0) {
+        } elseif ($statusCounts['Mantenimiento programado'] === $activeServices->count() && $activeServices->count() > 0) {
             $generalStatus = [
                 'text' => 'Mantenimiento programado',
                 'icon' => 'clock',
