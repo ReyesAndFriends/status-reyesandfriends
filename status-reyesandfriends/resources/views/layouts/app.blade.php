@@ -31,7 +31,7 @@
             @yield('content')
         </main>
         <footer class="w-full bg-zinc-900 text-gray-300 text-center py-2 text-sm mt-8">
-            © {{ date('Y') }} Reyes&Friends. All rights reserved.
+            © {{ date('Y') }} Reyes&Friends. Todos los derechos reservados.
         </footer>
     </body>
 </html>
